@@ -163,6 +163,7 @@ html{
     left: 0;
     right: 0;
     top: 25px;
+    z-index: 10;
     border-radius: 2px;
     background-color: var(--white-color);
    /* bỏ padding left mặc định */
@@ -183,5 +184,4 @@ html{
 }
 .select-input__link:hover{
     color: var(--primary-color);
-
 }
