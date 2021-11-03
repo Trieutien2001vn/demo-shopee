@@ -73,9 +73,7 @@
     height: 8px;
     color: black;
 }
-.header__navbar-user-item{
 
-}
 .header__navbar-user-item--separate{
     border-top: 1px solid rgba(0,0,0,0.1);
 
@@ -340,10 +338,6 @@
     font-weight: 600;
     color:var(--primary-color);
     cursor: pointer;
-}
-.auth-form__form{
-   
-
 }
 .auth-form__input{
     outline: none;
