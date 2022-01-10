@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +23,8 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
                             Vào của hàng trên ứng dụng F8-Shop
@@ -129,7 +132,7 @@
                             ký</li>
                         <li class="header__navbar-item header__navbar-item--strong">Đăng nhập</li> -->
                         <li class="header_navbar-item header__navbar-user">
-                            <img src="https://scontent.fvca1-2.fna.fbcdn.net/v/t1.6435-9/204203129_594029011587247_3587657453926952842_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=e3f864&_nc_ohc=LNAIQqzFwSkAX9LIZEB&_nc_ht=scontent.fvca1-2.fna&oh=ff64b4470e2a5882fd87b3b8bb4e5e4b&oe=61A2773B"
+                            <img src="https://scontent.fvca1-4.fna.fbcdn.net/v/t1.6435-9/191900019_575829230073892_2074289378911649035_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=19026a&_nc_ohc=W9NA2hfB4C0AX99j9wZ&_nc_ht=scontent.fvca1-4.fna&oh=00_AT-Q7n_MUe4i7JBhy6zllzCuakJ9j1pLMLm631Cvv9AS_Q&oe=62017A34"
                                 alt="" class="header__navbar-user-img">
                             <span class="header__navbar-user-name">Hoàng Thị Tú</span>
 
@@ -153,7 +156,10 @@
                 </nav>
                 <!-- Header with search -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fas fa-search"></i>
+                    </label>
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -163,6 +169,7 @@
                                 </g>
                             </svg></a>
                     </div>
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
                     <div class="header__search">
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phầm">
@@ -330,13 +337,27 @@
                     </div>
                 </div>
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
 
         </header>
 
         <div class="app__container">
-            <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__column-2">
+            <div class="grid wide">
+                <div class="row  app__content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category-heading"> Danh mục</h3>
                             <ul class="category-list">
@@ -353,8 +374,8 @@
 
                         </nav>
                     </div>
-                    <div class="grid__column-10">
-                        <div class="home-filter">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__lable">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button class="home-filter__btn btn home-filter__btn btn--primary">Mới nhất</button>
@@ -391,10 +412,50 @@
                                 </div>
                             </div>
                         </div>
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                            </ul>
+                        </nav>
                         <div class="home-product">
                             <!-- Grid -->
-                            <div class="grid__row">
-                                <div class="grid__column-2-4 ">
+                            <div class="row sm-gutter">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <a class="home-product-item"
                                         href="https://shopee.vn/Gi%C3%A0y-%C4%90%C3%A1-B%C3%B3ng-Cao-C%E1%BB%95-Cao-C%E1%BA%A5p-S%C3%A2n-C%E1%BB%8F-Nh%C3%A2n-T%E1%BA%A1o-M%E1%BA%ABu-i.151372506.6835960236">
                                         <div class="home-product-item__img"
@@ -435,7 +496,7 @@
                                     </a>
 
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://product.hstatic.net/1000230642/product/dsmh02401doo__2__7fb956b9f8e140e1aa95cf911ce0c13f_large.jpg)">
@@ -475,7 +536,7 @@
                                     </a>
 
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://fplussoccer.com/wp-content/uploads/2020/09/Giay-da-bong-san-co-NT-Adidas-X-Ghosted-.3-TURF.jpg)">
@@ -515,7 +576,7 @@
                                     </a>
 
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://product.hstatic.net/1000230642/product/02400cam__2__e1169f3ccb534dbea20e0b26e448a3a8_1024x1024.jpg)">
@@ -555,7 +616,207 @@
                                     </a>
 
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a class="home-product-item" href="">
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://product.hstatic.net/200000278317/product/anh-san-co-nhan-tao-puma-future-z-1-1-pro-cage-tf-106381-01-vang-den-1_31a855736f8c4ade98916cb3ca4f31bc_master.jpg)">
+                                        </div>
+                                        <h4 class="home-product-item__name">
+                                            PUMA FUTURE Z 1.1 PRO CAGE TF - 106381-01 - VÀNG/ĐEN</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 Sold</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Puma</span>
+                                            <span class="home-product-item__origin-name">Đức</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-lable">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col l-2-4 m-4 c-6 ">
+                                    <a class="home-product-item"
+                                        href="https://shopee.vn/Gi%C3%A0y-%C4%90%C3%A1-B%C3%B3ng-Cao-C%E1%BB%95-Cao-C%E1%BA%A5p-S%C3%A2n-C%E1%BB%8F-Nh%C3%A2n-T%E1%BA%A1o-M%E1%BA%ABu-i.151372506.6835960236">
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://cf.shopee.vn/file/3f217175d2ef0417ec83325907137a47)">
+                                        </div>
+                                        <h4 class="home-product-item__name">
+                                            Giày Đá Bóng Sân Cỏ Nhân Tạo Thiết Kế Cao Cổ Cao Cấp</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 Sold</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Nike</span>
+                                            <span class="home-product-item__origin-name">Đức</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-lable">GIẢM</span>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a class="home-product-item" href="">
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://product.hstatic.net/1000230642/product/dsmh02401doo__2__7fb956b9f8e140e1aa95cf911ce0c13f_large.jpg)">
+                                        </div>
+                                        <h4 class="home-product-item__name">
+                                            Giày Bóng Đá Nam Biti's Hunter Football DSMH02401DOO (Đỏ)</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">10000 Sold</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Bitis</span>
+                                            <span class="home-product-item__origin-name">VN</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-lable">GIẢM</span>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a class="home-product-item" href="">
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://fplussoccer.com/wp-content/uploads/2020/09/Giay-da-bong-san-co-NT-Adidas-X-Ghosted-.3-TURF.jpg)">
+                                        </div>
+                                        <h4 class="home-product-item__name">
+                                            [Super-F] Giày đá bóng sân cỏ NT Adidas X Ghosted TURF</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 Sold</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Nike</span>
+                                            <span class="home-product-item__origin-name">Đức</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-lable">GIẢM</span>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a class="home-product-item" href="">
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://product.hstatic.net/1000230642/product/02400cam__2__e1169f3ccb534dbea20e0b26e448a3a8_1024x1024.jpg)">
+                                        </div>
+                                        <h4 class="home-product-item__name">
+                                            Giày Bóng Đá Nam Biti's Hunter Football DSMH02400CAM (Cam)</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span class="home-product-item__sold">88 Sold</span>
+                                        </div>
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Bitis Hunter</span>
+                                            <span class="home-product-item__origin-name">Việt Nam</span>
+                                        </div>
+                                        <div class="home-product-item__favourite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__sale-off-lable">GIẢM</span>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <div class="home-product-item__img"
                                             style="background-image: url(https://product.hstatic.net/200000278317/product/anh-san-co-nhan-tao-puma-future-z-1-1-pro-cage-tf-106381-01-vang-den-1_31a855736f8c4ade98916cb3ca4f31bc_master.jpg)">
@@ -636,9 +897,9 @@
         </div>
     </div>
     <footer class="footer">
-        <div class="grid">
-            <div class="grid__row">
-                <div class="grid__column-2-4">
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-2-4">
                     <h2 class="footer__heading">Chăm sóc khách hàng</h2>
                     <ul class="footer-list">
                         <li class="footer-item">
@@ -652,7 +913,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="grid__column-2-4">
+                <div class="col l-2-4">
                     <h2 class="footer__heading">Giới thiệu</h2>
                     <ul class="footer-list">
                         <li class="footer-item">
@@ -666,7 +927,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="grid__column-2-4">
+                <div class="col l-2-4">
                     <h2 class="footer__heading">Danh mục</h2>
                     <ul class="footer-list">
                         <li class="footer-item">
@@ -680,7 +941,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="grid__column-2-4">
+                <div class="col l-2-4">
                     <h2 class="footer__heading">Theo dõi</h2>
                     <ul class="footer-list">
                         <li class="footer-item">
@@ -703,7 +964,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="grid__column-2-4">
+                <div class="col l-2-4">
                     <h2 class="footer__heading">Vào của hàng trên ứng dụng</h2>
                     <div class="footer__download">
                         <img src="/assets/img/qr_code.png" alt="QR code" class="footer__download-qr">
@@ -720,12 +981,12 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <div class="grid">
+            <div class="grid wide">
                 <p class="footer__text">© 2021 - Bản quyền thuộc về Công ty TNHH Shopee-Demo</p>
             </div>
         </div>
     </footer>
-    
+
     </div>
     <!-- Modal -->
     <!-- <div class="modal">
