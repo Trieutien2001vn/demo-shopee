@@ -156,9 +156,14 @@
                 </nav>
                 <!-- Header with search -->
                 <div class="header-with-search">
+                   <div class="wrap">
+                    <label for="mobile-list-checkbox" class="header__mobile-list">
+                        <i class="header__mobile-list-icon fas fa-list-ul"></i>
+                    </label>
                     <label for="mobile-search-checkbox" class="header__mobile-search">
                         <i class="header__mobile-search-icon fas fa-search"></i>
                     </label>
+                   </div>
                     <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
@@ -211,6 +216,8 @@
                         </button>
 
                     </div>
+                    <div class="overlay" style="display: none;"></div>
+
                     <!-- Cart layout -->
                     <div class="header__cart">
                         <div class="header__cart-wrap">
@@ -897,9 +904,9 @@
         </div>
     </div>
     <footer class="footer">
-        <div class="grid wide">
+        <div class="grid wide footer__content">
             <div class="row">
-                <div class="col l-2-4">
+                <div class="col l-2-4 m-4 c-6">
                     <h2 class="footer__heading">Chăm sóc khách hàng</h2>
                     <ul class="footer-list">
                         <li class="footer-item">
@@ -913,7 +920,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col l-2-4">
+                <div class="col l-2-4 m-4 c-6">
                     <h2 class="footer__heading">Giới thiệu</h2>
                     <ul class="footer-list">
                         <li class="footer-item">
@@ -927,7 +934,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col l-2-4">
+                <div class="col l-2-4 m-4 c-6">
                     <h2 class="footer__heading">Danh mục</h2>
                     <ul class="footer-list">
                         <li class="footer-item">
@@ -941,7 +948,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col l-2-4">
+                <div class="col l-2-4 m-4 c-6">
                     <h2 class="footer__heading">Theo dõi</h2>
                     <ul class="footer-list">
                         <li class="footer-item">
@@ -964,7 +971,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col l-2-4">
+                <div class="col l-2-4 m-4 c-12">
                     <h2 class="footer__heading">Vào của hàng trên ứng dụng</h2>
                     <div class="footer__download">
                         <img src="/assets/img/qr_code.png" alt="QR code" class="footer__download-qr">
