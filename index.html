@@ -158,8 +158,39 @@
                 <div class="header-with-search">
                    <div class="wrap">
                     <label for="mobile-list-checkbox" class="header__mobile-list">
-                        <i class="header__mobile-list-icon fas fa-list-ul"></i>
+                        <i class="header__mobile-list-icon fas fa-bars"></i>
                     </label>
+                    <input type="checkbox" hidden id="mobile-list-checkbox" class="header__list-checkbox">
+                    <label for="mobile-list-checkbox" class="overlay"></label>
+                    <nav class="header__navbar-mobile">
+                        <label for="mobile-list-checkbox" class="header__navbar-mobile-close">
+                            <i class="fas fa-times"></i>
+                        </label>
+                        <ul class="header__navbar-mobile-list">
+                            <li>
+                                <img src="https://cdn.fullstack.edu.vn/f8-production/user_photos/151231/61d1acd08e274.jpg" alt="">
+                            </li>
+                            <li>
+                                <i class="fas fa-home"></i>
+                                <a href="" class="header__navbar-mobile-link">Trang chủ</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-shoe-prints"></i>
+                                <a href="" class="header__navbar-mobile-link">Danh mục</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-headphones-alt"></i>
+                                <a href="" class="header__navbar-mobile-link">Hổ trợ</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-sign-out-alt"></i>
+                                <a href="" class="header__navbar-mobile-link">Đăng xuất</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+
+                    <!-- search -->
                     <label for="mobile-search-checkbox" class="header__mobile-search">
                         <i class="header__mobile-search-icon fas fa-search"></i>
                     </label>
@@ -216,7 +247,7 @@
                         </button>
 
                     </div>
-                    <div class="overlay" style="display: none;"></div>
+            
 
                     <!-- Cart layout -->
                     <div class="header__cart">
